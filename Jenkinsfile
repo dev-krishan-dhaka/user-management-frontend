@@ -57,7 +57,7 @@ pipeline {
 
                     cd gitops-environments
 
-                    yq e '.image.tag = "${IMAGE_TAG}"' \
+                    yq e '.frontend.image.tag = "${IMAGE_TAG}"' \
                        -i dev/user-management/frontend-values.yaml
 
                     git config user.email "jenkins@ci.com"
